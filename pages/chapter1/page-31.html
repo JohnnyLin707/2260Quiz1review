@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070b16'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%235eead4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2360a5fa'/%3E%3C/svg%3E">
+  <title>Figure 1.12: Transfer of Control with Multiple Interrupts — Ch01v2a.pdf (Slide 31) | Quiz 1 Review</title>
+  <meta name="description" content="Quiz 1 review notes excerpted from Ch01v2a.pdf, page 31: Figure 1.12: Transfer of Control with Multiple Interrupts">
+  <link rel="stylesheet" href="../../css/style.css">
+  <noscript><style>.reveal{opacity:1 !important}</style></noscript>
+</head>
+<body class="review-page has-sidebar" data-topic="chapter1" data-page="31">
+
+  <div class="animated-bg" aria-hidden="true">
+    <span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <aside class="sidebar" id="sidebar" aria-label="Slide navigation">
+    <div class="sidebar-head">
+      <span class="sidebar-title">Slides</span>
+      <button class="sidebar-close" type="button" aria-label="Close navigation">&#10005;</button>
+    </div>
+    <div class="sidebar-search">
+      <input class="sidebar-filter" type="search" placeholder="Jump to slide…" aria-label="Filter slides">
+    </div>
+    <nav class="sidebar-list">
+        <a class="sidebar-link" href="page-01.html" data-num="01" data-title="Title Slide">
+          <span class="snum">01</span>
+          <span class="sname">Title Slide<span class="sname-zh">标题页</span></span>
+        </a>
+        <a class="sidebar-link" href="page-02.html" data-num="02" data-title="Operating System">
+          <span class="snum">02</span>
+          <span class="sname">Operating System<span class="sname-zh">操作系统</span></span>
+        </a>
+        <a class="sidebar-link" href="page-03.html" data-num="03" data-title="Basic Elements">
+          <span class="snum">03</span>
+          <span class="sname">Basic Elements<span class="sname-zh">基本组成元素</span></span>
+        </a>
+        <a class="sidebar-link" href="page-04.html" data-num="04" data-title="Processor">
+          <span class="snum">04</span>
+          <span class="sname">Processor<span class="sname-zh">处理器</span></span>
+        </a>
+        <a class="sidebar-link" href="page-05.html" data-num="05" data-title="Main Memory">
+          <span class="snum">05</span>
+          <span class="sname">Main Memory<span class="sname-zh">主存储器</span></span>
+        </a>
+        <a class="sidebar-link" href="page-06.html" data-num="06" data-title="I/O Modules">
+          <span class="snum">06</span>
+          <span class="sname">I/O Modules<span class="sname-zh">I/O 模块</span></span>
+        </a>
+        <a class="sidebar-link" href="page-07.html" data-num="07" data-title="System Bus">
+          <span class="snum">07</span>
+          <span class="sname">System Bus<span class="sname-zh">系统总线</span></span>
+        </a>
+        <a class="sidebar-link" href="page-08.html" data-num="08" data-title="Figure 1.1: Computer Components — Top-Level View">
+          <span class="snum">08</span>
+          <span class="sname">Figure 1.1: Computer Components — Top-Level View<span class="sname-zh">图 1.1：计算机部件——顶层视图</span></span>
+        </a>
+        <a class="sidebar-link" href="page-09.html" data-num="09" data-title="Microprocessor">
+          <span class="snum">09</span>
+          <span class="sname">Microprocessor<span class="sname-zh">微处理器</span></span>
+        </a>
+        <a class="sidebar-link" href="page-10.html" data-num="10" data-title="Graphical Processing Units (GPUs)">
+          <span class="snum">10</span>
+          <span class="sname">Graphical Processing Units (GPUs)<span class="sname-zh">图形处理器（GPU）</span></span>
+        </a>
+        <a class="sidebar-link" href="page-11.html" data-num="11" data-title="Digital Signal Processors (DSPs)">
+          <span class="snum">11</span>
+          <span class="sname">Digital Signal Processors (DSPs)<span class="sname-zh">数字信号处理器（DSP）</span></span>
+        </a>
+        <a class="sidebar-link" href="page-12.html" data-num="12" data-title="System on a Chip (SoC)">
+          <span class="snum">12</span>
+          <span class="sname">System on a Chip (SoC)<span class="sname-zh">片上系统（SoC）</span></span>
+        </a>
+        <a class="sidebar-link" href="page-13.html" data-num="13" data-title="Instruction Execution">
+          <span class="snum">13</span>
+          <span class="sname">Instruction Execution<span class="sname-zh">指令执行</span></span>
+        </a>
+        <a class="sidebar-link" href="page-14.html" data-num="14" data-title="Figure 1.2: Basic Instruction Cycle">
+          <span class="snum">14</span>
+          <span class="sname">Figure 1.2: Basic Instruction Cycle<span class="sname-zh">图 1.2：基本指令周期</span></span>
+        </a>
+        <a class="sidebar-link" href="page-15.html" data-num="15" data-title="Instruction Fetch and Execute">
+          <span class="snum">15</span>
+          <span class="sname">Instruction Fetch and Execute<span class="sname-zh">指令的取指与执行</span></span>
+        </a>
+        <a class="sidebar-link" href="page-16.html" data-num="16" data-title="Instruction Register (IR)">
+          <span class="snum">16</span>
+          <span class="sname">Instruction Register (IR)<span class="sname-zh">指令寄存器（IR）</span></span>
+        </a>
+        <a class="sidebar-link" href="page-17.html" data-num="17" data-title="Illustration: Processor / Program Execution Diagram">
+          <span class="snum">17</span>
+          <span class="sname">Illustration: Processor / Program Execution Diagram<span class="sname-zh">插图：处理器 / 程序执行示意图</span></span>
+        </a>
+        <a class="sidebar-link" href="page-18.html" data-num="18" data-title="Figure 1.4: Example of Program Execution">
+          <span class="snum">18</span>
+          <span class="sname">Figure 1.4: Example of Program Execution<span class="sname-zh">图 1.4：程序执行示例</span></span>
+        </a>
+        <a class="sidebar-link" href="page-19.html" data-num="19" data-title="Interrupts">
+          <span class="snum">19</span>
+          <span class="sname">Interrupts<span class="sname-zh">中断</span></span>
+        </a>
+        <a class="sidebar-link" href="page-20.html" data-num="20" data-title="Table 1.1: Classes of Interrupts">
+          <span class="snum">20</span>
+          <span class="sname">Table 1.1: Classes of Interrupts<span class="sname-zh">表 1.1：中断的分类</span></span>
+        </a>
+        <a class="sidebar-link" href="page-21.html" data-num="21" data-title="Figure 1.5a: Flow of Control Without Interrupts">
+          <span class="snum">21</span>
+          <span class="sname">Figure 1.5a: Flow of Control Without Interrupts<span class="sname-zh">图 1.5a：无中断时的控制流</span></span>
+        </a>
+        <a class="sidebar-link" href="page-22.html" data-num="22" data-title="Figure 1.5b: Short I/O Wait">
+          <span class="snum">22</span>
+          <span class="sname">Figure 1.5b: Short I/O Wait<span class="sname-zh">图 1.5b：短 I/O 等待</span></span>
+        </a>
+        <a class="sidebar-link" href="page-23.html" data-num="23" data-title="Figure 1.5c: Long I/O Wait">
+          <span class="snum">23</span>
+          <span class="sname">Figure 1.5c: Long I/O Wait<span class="sname-zh">图 1.5c：长 I/O 等待</span></span>
+        </a>
+        <a class="sidebar-link" href="page-24.html" data-num="24" data-title="Figure 1.6: Transfer of Control via Interrupts">
+          <span class="snum">24</span>
+          <span class="sname">Figure 1.6: Transfer of Control via Interrupts<span class="sname-zh">图 1.6：通过中断进行控制转移</span></span>
+        </a>
+        <a class="sidebar-link" href="page-25.html" data-num="25" data-title="Figure 1.7: Instruction Cycle with Interrupts">
+          <span class="snum">25</span>
+          <span class="sname">Figure 1.7: Instruction Cycle with Interrupts<span class="sname-zh">图 1.7：带中断的指令周期</span></span>
+        </a>
+        <a class="sidebar-link" href="page-26.html" data-num="26" data-title="Figure 1.8: Program Timing — Short I/O Wait">
+          <span class="snum">26</span>
+          <span class="sname">Figure 1.8: Program Timing — Short I/O Wait<span class="sname-zh">图 1.8：程序时序——短 I/O 等待</span></span>
+        </a>
+        <a class="sidebar-link" href="page-27.html" data-num="27" data-title="Figure 1.9: Program Timing — Long I/O Wait">
+          <span class="snum">27</span>
+          <span class="sname">Figure 1.9: Program Timing — Long I/O Wait<span class="sname-zh">图 1.9：程序时序——长 I/O 等待</span></span>
+        </a>
+        <a class="sidebar-link" href="page-28.html" data-num="28" data-title="Figure 1.10: Simple Interrupt Processing">
+          <span class="snum">28</span>
+          <span class="sname">Figure 1.10: Simple Interrupt Processing<span class="sname-zh">图 1.10：简单的中断处理</span></span>
+        </a>
+        <a class="sidebar-link" href="page-29.html" data-num="29" data-title="Figure 1.11: Changes in Memory and Registers for an Interrupt">
+          <span class="snum">29</span>
+          <span class="sname">Figure 1.11: Changes in Memory and Registers for an Interrupt<span class="sname-zh">图 1.11：中断引起的存储器与寄存器变化</span></span>
+        </a>
+        <a class="sidebar-link" href="page-30.html" data-num="30" data-title="Multiple Interrupts">
+          <span class="snum">30</span>
+          <span class="sname">Multiple Interrupts<span class="sname-zh">多重中断</span></span>
+        </a>
+        <a class="sidebar-link active" href="page-31.html" data-num="31" data-title="Figure 1.12: Transfer of Control with Multiple Interrupts">
+          <span class="snum">31</span>
+          <span class="sname">Figure 1.12: Transfer of Control with Multiple Interrupts<span class="sname-zh">图 1.12：多重中断下的控制转移</span></span>
+        </a>
+        <a class="sidebar-link" href="page-32.html" data-num="32" data-title="Figure 1.13: Example Time Sequence of Multiple Interrupts">
+          <span class="snum">32</span>
+          <span class="sname">Figure 1.13: Example Time Sequence of Multiple Interrupts<span class="sname-zh">图 1.13：多重中断的时间序列示例</span></span>
+        </a>
+        <a class="sidebar-link" href="page-33.html" data-num="33" data-title="Memory Hierarchy — Design Constraints">
+          <span class="snum">33</span>
+          <span class="sname">Memory Hierarchy — Design Constraints<span class="sname-zh">存储器层次结构——设计约束</span></span>
+        </a>
+        <a class="sidebar-link" href="page-34.html" data-num="34" data-title="Memory Relationships">
+          <span class="snum">34</span>
+          <span class="sname">Memory Relationships<span class="sname-zh">存储器之间的关系</span></span>
+        </a>
+        <a class="sidebar-link" href="page-35.html" data-num="35" data-title="The Memory Hierarchy">
+          <span class="snum">35</span>
+          <span class="sname">The Memory Hierarchy<span class="sname-zh">存储器层次结构</span></span>
+        </a>
+        <a class="sidebar-link" href="page-36.html" data-num="36" data-title="Figure 1.15: Performance of a Simple Two-Level Memory">
+          <span class="snum">36</span>
+          <span class="sname">Figure 1.15: Performance of a Simple Two-Level Memory<span class="sname-zh">图 1.15：简单两级存储器的性能</span></span>
+        </a>
+        <a class="sidebar-link" href="page-37.html" data-num="37" data-title="Principle of Locality">
+          <span class="snum">37</span>
+          <span class="sname">Principle of Locality<span class="sname-zh">局部性原理</span></span>
+        </a>
+        <a class="sidebar-link" href="page-38.html" data-num="38" data-title="Secondary Memory">
+          <span class="snum">38</span>
+          <span class="sname">Secondary Memory<span class="sname-zh">辅助存储器</span></span>
+        </a>
+        <a class="sidebar-link" href="page-39.html" data-num="39" data-title="Cache Memory">
+          <span class="snum">39</span>
+          <span class="sname">Cache Memory<span class="sname-zh">高速缓冲存储器（Cache）</span></span>
+        </a>
+        <a class="sidebar-link" href="page-40.html" data-num="40" data-title="Figure 1.16: Cache and Main Memory">
+          <span class="snum">40</span>
+          <span class="sname">Figure 1.16: Cache and Main Memory<span class="sname-zh">图 1.16：Cache 与主存</span></span>
+        </a>
+        <a class="sidebar-link" href="page-41.html" data-num="41" data-title="Figure 1.17: Cache/Main-Memory Structure">
+          <span class="snum">41</span>
+          <span class="sname">Figure 1.17: Cache/Main-Memory Structure<span class="sname-zh">图 1.17：Cache / 主存结构</span></span>
+        </a>
+        <a class="sidebar-link" href="page-42.html" data-num="42" data-title="Figure 1.18: Cache Read Operation">
+          <span class="snum">42</span>
+          <span class="sname">Figure 1.18: Cache Read Operation<span class="sname-zh">图 1.18：Cache 读操作</span></span>
+        </a>
+        <a class="sidebar-link" href="page-43.html" data-num="43" data-title="Cache Design">
+          <span class="snum">43</span>
+          <span class="sname">Cache Design<span class="sname-zh">Cache 设计</span></span>
+        </a>
+        <a class="sidebar-link" href="page-44.html" data-num="44" data-title="Cache and Block Size">
+          <span class="snum">44</span>
+          <span class="sname">Cache and Block Size<span class="sname-zh">Cache 大小与块大小</span></span>
+        </a>
+        <a class="sidebar-link" href="page-45.html" data-num="45" data-title="Mapping Function">
+          <span class="snum">45</span>
+          <span class="sname">Mapping Function<span class="sname-zh">映射函数</span></span>
+        </a>
+        <a class="sidebar-link" href="page-46.html" data-num="46" data-title="Replacement Algorithm">
+          <span class="snum">46</span>
+          <span class="sname">Replacement Algorithm<span class="sname-zh">替换算法</span></span>
+        </a>
+        <a class="sidebar-link" href="page-47.html" data-num="47" data-title="Write Policy (Last slide for Quiz 1)">
+          <span class="snum">47</span>
+          <span class="sname">Write Policy (Last slide for Quiz 1)<span class="sname-zh">写策略（本次测验的最后一页）</span></span>
+        </a>
+    </nav>
+  </aside>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <button class="btn btn-menu" type="button" data-sidebar-toggle aria-label="Toggle slide list">&#9776;</button>
+        <a class="btn btn-home" href="../../index.html">&#8962; Home Page</a>
+      </div>
+      <div class="topbar-center">
+        <div class="topbar-title">Chapter 1: Computer System Overview<span>&middot; Slide 31 of 47</span></div>
+      </div>
+      <div class="topbar-right">
+        <span class="pdf-tag">Ch01v2a.pdf</span>
+      </div>
+    </div>
+    <div class="progress-track"><div class="progress-bar" data-progress="66.0"></div></div>
+  </header>
+
+  <main class="page-wrap">
+    <header class="page-head">
+      <div class="page-meta"><span>Slide 31 / 47</span></div>
+      <h1 class="page-title reveal">Figure 1.12: Transfer of Control with Multiple Interrupts</h1>
+      <p class="page-title-zh reveal">图 1.12：多重中断下的控制转移</p>
+      <div class="source-badge reveal">Excerpted from &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 31</div>
+    </header>
+
+    <section class="panel original reveal">
+      <h2>Original Content (verbatim)</h2>
+      <p class="figure-caption">Figure 1.12 Transfer of Control with Multiple Interrupts &mdash; User Program, Interrupt Handler X, Interrupt Handler Y.<span class="item-zh">图 1.12 多重中断下的控制转移 —— 用户程序、中断处理程序 X、中断处理程序 Y。</span></p>
+<ul class="content-list">
+        <li>(a) Sequential interrupt processing<span class="item-zh">(a) 顺序中断处理</span></li>
+        <li>(b) Nested interrupt processing<span class="item-zh">(b) 嵌套中断处理</span></li>
+      </ul>
+    </section>
+
+    <section class="qa-section">
+      <div class="qa-heading reveal">
+        <span class="icon">&#63;</span>
+        <span>Possible Exam Questions</span>
+        <span class="count">(1 questions &middot; click to reveal)</span>
+      </div>
+
+      <article class="qa-card reveal">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q1</span>
+          <span class="q-text">What are the two types of multiple-interrupt processing?<span class="q-zh">多重中断处理有哪两种类型？</span></span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en">&ldquo;(a) Sequential interrupt processing&rdquo; and &ldquo;(b) Nested interrupt processing&rdquo;.</p>
+            <p class="ans-zh">即“(a) 顺序中断处理”和“(b) 嵌套中断处理”。</p>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 31</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <nav class="bottom-nav" aria-label="Slide navigation">
+      <a class="btn btn-back" href="page-30.html">&#8592; Back</a>
+      <a class="btn btn-next" href="page-32.html">Next &#8594;</a>
+    </nav>
+
+    <div class="kbd-hint">
+      <kbd>&#8592;</kbd> Back &nbsp; <kbd>&#8594;</kbd> Next &nbsp; <kbd>Esc</kbd> Home
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    Quiz 1 Review &middot; Chapter 1: Computer System Overview &middot; slide content is quoted directly from &ldquo;Ch01v2a.pdf&rdquo;.
+  </footer>
+
+  <script src="../../javascript/main.js"></script>
+  <script src="../../javascript/animations.js"></script>
+</body>
+</html>
