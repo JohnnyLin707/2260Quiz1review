@@ -1,0 +1,5 @@
+# macOS metadata
+.DS_Store
+
+# Temp / download artifacts (e.g. smallpdf-convert-*.zip)
+*.zip

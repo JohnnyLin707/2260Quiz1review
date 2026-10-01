@@ -5,6 +5,30 @@
 (function () {
   "use strict";
 
+  /* ------------------------------------------- self-check module ----- */
+  /* The auto-marked self-check exercise lives in its own file (quiz.js) so
+     that every page gets it without editing 87 HTML documents. This file is
+     loaded last in <body>, so its own src gives us the correct path. */
+  (function loadSelfCheck() {
+    var body = document.body;
+    if (!body || body.dataset.selfcheck === "off") return;
+    if (!body.classList.contains("review-page")) return;
+
+    var self = document.currentScript;
+    var src = self && self.getAttribute ? self.getAttribute("src") : null;
+    if (!src) {
+      var tag = document.querySelector('script[src*="main.js"]');
+      src = tag ? tag.getAttribute("src") : "javascript/main.js";
+    }
+    if (!/main\.js/.test(src)) return;
+    src = src.replace(/main\.js/, "quiz.js");
+    if (document.querySelector('script[src="' + src + '"]')) return;
+
+    var s = document.createElement("script");
+    s.src = src;
+    body.appendChild(s);
+  })();
+
   /* ------------------------------------------------ scroll reveal ----- */
   function initReveal() {
     var items = document.querySelectorAll(".reveal");
