@@ -40,7 +40,12 @@
    exceed the viewport, regardless of where it sits in the DOM. */
 img, svg, video, canvas { max-width: 100%; height: auto; }
 
-html { scroll-behavior: smooth; overflow-x: hidden; }
+/* NOTE: do NOT set overflow-x here. If the root element has a non-visible
+   overflow it becomes its own scroll container, which stops the sticky
+   topbar inside <body> from pinning to the viewport. The horizontal clip is
+   provided by `body { overflow-x: hidden }`, which in that case is
+   propagated to the viewport by the UA. */
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
