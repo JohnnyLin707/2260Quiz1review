@@ -36,7 +36,11 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+/* Global responsive safety net: no media (slide scans, icons, etc.) may ever
+   exceed the viewport, regardless of where it sits in the DOM. */
+img, svg, video, canvas { max-width: 100%; height: auto; }
+
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   margin: 0;
