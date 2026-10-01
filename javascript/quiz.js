@@ -50,6 +50,18 @@
       .trim();
   }
 
+  /* A short answer that is literally part of the model answer counts as
+     correct (e.g. "25" for "11001 in binary equals 25 in decimal",
+     "RAM" for "Memory (RAM): how much ..."). Punctuation is ignored on both
+     sides so "16 8 4 2 1" matches "16, 8, 4, 2, 1". */
+  function looseContains(expected, value) {
+    if (!expected || !value) return false;
+    var e = aliasify(expected).replace(/[^a-z0-9]+/g, " ").replace(/\s+/g, " ").trim();
+    var v = aliasify(value).replace(/[^a-z0-9]+/g, " ").replace(/\s+/g, " ").trim();
+    if (!v || v.length > 40 || v.length < 2) return false;
+    return e.indexOf(v) !== -1;
+  }
+
   /* words that carry no meaning for the check */
   var STOP = {
     the: 1, a: 1, an: 1, of: 1, to: 1, in: 1, is: 1, are: 1, was: 1, were: 1,
@@ -91,6 +103,13 @@
     [/\bhigh[- ]speed\b/g, "fast"],
     [/\bcircuit board\b/g, "motherboard"],
     [/\bpower supply\b/g, "psu"],
+    [/\bprocessor\b/g, "cpu"],
+    [/\bincrement(s|ed|ing)?\b/g, "increase"],
+    [/\bprimary storage\b/g, "memory"],
+    [/\bsecondary storage\b/g, "storage"],
+    [/\b(video|graphics) card\b/g, "gpu"],
+    [/\bplace values?\b/g, "value"],
+    [/\btend(s|ed|ing)? to\b/g, "tend"],
     /* common paraphrases so a correctly reworded answer still passes */
     [/\b(decide[sd]?|deciding|determine[sd]?|determining|dictate[sd]?|dictating)\b/g, "dictate"],
     [/\b(happen[s]?|happened|happening|occur[s]?|occurred|occurring|takes place|took place|take place)\b/g, "happen"],
@@ -187,6 +206,7 @@
       var enoughWords = hit >= Math.min(2, kw.length);
       var direct = aliasify(value).indexOf(aliasify(slot.en)) !== -1;
       if (direct || (enough && enoughWords)) ok = true;
+      if (!ok && looseContains(slot.en, value)) ok = true;
     }
 
     if (!ok && slot.zh) {

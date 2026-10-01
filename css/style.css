@@ -914,6 +914,17 @@ kbd {
   .sc-total { margin-left: 0; width: 100%; text-align: right; }
 }
 
+/* ------------------------------------------- important short answers -- */
+.qz-q {
+  margin: 0 0 0.35rem;
+  font-size: 1.03rem; font-weight: 640; line-height: 1.62; color: var(--text);
+}
+.qz-src-head {
+  margin: 1.15rem 0 0.6rem;
+  font-family: var(--mono); font-size: 0.66rem; font-weight: 800;
+  letter-spacing: 1.6px; color: rgba(94, 234, 212, 0.88);
+}
+
 /* =====================================================================
    HOME PAGE — fill-in-the-blank drill (rendered by javascript/home-quiz.js)
    Instruction-cycle trace questions on the hypothetical processor.
