@@ -62,6 +62,48 @@
     </section>
   </header>
 
+  <main class="site-shell">
+    <section class="home-quiz reveal" id="homeQuiz" aria-labelledby="hqTitle">
+      <div class="hq-head">
+        <span class="hq-icon" aria-hidden="true">&#9998;</span>
+        <div>
+          <h2 class="hq-title" id="hqTitle">Fill in the Blanks &middot; Instruction Cycle Drill</h2>
+          <p class="hq-sub">
+            Ten short-answer questions on the hypothetical processor from the lecture. Read the
+            setup below, type your answers into the boxes, then press <strong>Check answers</strong>.
+            Capitalisation, spacing and full sentences are not graded &mdash; only the value you write.
+          </p>
+        </div>
+      </div>
+
+      <div class="hq-spec">
+        <h3>The hypothetical processor</h3>
+        <ul>
+          <li><code>0001</code> = 1 = Load AC from memory</li>
+          <li><code>0010</code> = 2 = Store AC to memory</li>
+          <li><code>0101</code> = 5 = Add to AC from memory</li>
+          <li class="hq-io"><code>0011</code> = 3 = Load AC from I/O</li>
+          <li class="hq-io"><code>0111</code> = 7 = Store AC to I/O</li>
+        </ul>
+        <p style="margin:.7rem 0 0">
+          The first 4 bits of an instruction are the opcode; the remaining 12 bits are the argument
+          (a memory address or an I/O device number). The program loaded into memory is:
+          <code>300&nbsp;[3005]</code>&nbsp;&nbsp;<code>301&nbsp;[5940]</code>&nbsp;&nbsp;<code>302&nbsp;[7006]</code>,
+          with <code>940&nbsp;[0002]</code>. Device&nbsp;5 currently holds <code>0004</code>.
+        </p>
+      </div>
+
+      <div class="hq-list" id="hqList"></div>
+
+      <div class="hq-actions">
+        <button class="hq-btn hq-btn-primary" id="hqCheck" type="button">Check answers</button>
+        <button class="hq-btn" id="hqReveal" type="button">Show answers</button>
+        <button class="hq-btn" id="hqReset" type="button">Reset</button>
+        <span class="hq-score" id="hqScore" role="status" aria-live="polite"></span>
+      </div>
+    </section>
+  </main>
+
   <footer class="page-footer">
     Quiz 1 Review Hub &middot; built from the course lecture slides.
     <div class="kbd-hint" style="margin-top:.8rem">
@@ -71,5 +113,6 @@
 
   <script src="javascript/main.js"></script>
   <script src="javascript/animations.js"></script>
+  <script src="javascript/home-quiz.js"></script>
 </body>
 </html>
