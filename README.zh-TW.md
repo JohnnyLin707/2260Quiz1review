@@ -25,7 +25,8 @@ https://johnnylin707.github.io/2260Quiz1review/index.html
 | 01 | 電腦硬體導論 / Introduction to Computer Hardware | `Intro to HW v2.pdf` | 40（全部） | 109 |
 | 02 | 第 1 章：電腦系統概觀 / Chapter 1: Computer System Overview | `Ch01v2a.pdf` | 47（第 1–47 頁，到「寫入策略」為止） | 96 |
 | 03 | 小考 1 重點簡答題 / Quiz1importantShortAnswer | Short Questions（17 分） | — | 4 |
-| | **合計** | | **87** | **209** |
+| 04 | 小考 1 重點回憶題 / Quiz 1 Key Questions | 兩個單元 | — | 25 |
+| | **合計** | | **87** | **234** |
 
 ### 單元 01 —— 電腦硬體導論
 硬體與軟體、二進位數字、PC 組成元件、主機板、儲存裝置、匯流排、BIOS/UEFI 以及電源系統。

@@ -25,7 +25,8 @@ https://johnnylin707.github.io/2260Quiz1review/index.html
 | 01 | 计算机硬件导论 / Introduction to Computer Hardware | `Intro to HW v2.pdf` | 40（全部） | 109 |
 | 02 | 第 1 章：计算机系统概述 / Chapter 1: Computer System Overview | `Ch01v2a.pdf` | 47（第 1–47 页，到「写策略」为止） | 96 |
 | 03 | 测验 1 重点简答题 / Quiz1importantShortAnswer | Short Questions（17 分） | — | 4 |
-| | **合计** | | **87** | **209** |
+| 04 | 测验 1 重点回忆题 / Quiz 1 Key Questions | 两个单元 | — | 25 |
+| | **合计** | | **87** | **234** |
 
 ### 单元 01 —— 计算机硬件导论
 硬件与软件、二进制数、PC 组成部件、主板、存储设备、总线、BIOS/UEFI 以及供电系统。

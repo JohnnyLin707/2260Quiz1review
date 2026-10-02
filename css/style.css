@@ -1011,6 +1011,19 @@ kbd {
   letter-spacing: 1.6px; color: rgba(94, 234, 212, 0.88);
 }
 
+/* ----------------------------------- professor's key-questions quiz -- */
+.q-mark {
+  margin-left: auto; flex: 0 0 auto;
+  font-family: var(--mono); font-size: 0.7rem; font-weight: 800;
+  letter-spacing: 0.4px; color: var(--accent-3);
+  background: rgba(167, 139, 250, 0.14);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-radius: 999px; padding: 0.2rem 0.62rem; white-space: nowrap;
+}
+.qa-card { scroll-margin-top: 92px; }
+.qa-answer-inner .content-list { margin: 0.2rem 0 0.4rem; }
+.qa-answer-inner .content-list li { padding-top: 0.6rem; padding-bottom: 0.6rem; }
+
 /* =====================================================================
    HOME PAGE — fill-in-the-blank drill (rendered by javascript/home-quiz.js)
    Instruction-cycle trace questions on the hypothetical processor.

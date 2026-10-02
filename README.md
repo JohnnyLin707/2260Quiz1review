@@ -25,7 +25,8 @@ A static, dependency-free review site for **Operating Systems Quiz 1**. Every le
 | 01 | Introduction to Computer Hardware / 计算机硬件导论 | `Intro to HW v2.pdf` | 40 (all) | 109 |
 | 02 | Chapter 1: Computer System Overview / 第 1 章：计算机系统概述 | `Ch01v2a.pdf` | 47 (slides 1–47, up to *Write Policy*) | 96 |
 | 03 | Quiz1importantShortAnswer / 测验 1 重点简答题 | Short Questions (17 marks) | — | 4 |
-| | **Total** | | **87** | **209** |
+| 04 | Quiz 1 Key Questions / 测验 1 重点回忆题 | Both decks | — | 25 |
+| | **Total** | | **87** | **234** |
 
 ### Deck 01 — Introduction to Computer Hardware
 Hardware vs. software, binary numbers, PC components, the motherboard, storage devices, buses, BIOS/UEFI, and the electrical system.

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070b16'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%235eead4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2360a5fa'/%3E%3C/svg%3E">
+  <title>Quiz 1 Key Questions &middot; Consolidated Recall Quiz</title>
+  <meta name="description" content="Professor-style consolidated recall quiz for Quiz 1. Every answer is the original wording from the lecture slides; each point is worth 1 mark. Click a question to reveal the bilingual answer.">
+  <link rel="stylesheet" href="../css/style.css">
+  <noscript><style>.reveal{opacity:1 !important}</style></noscript>
+</head>
+<body class="review-page" data-topic="quiz1" data-page="kq">
+
+  <div class="animated-bg" aria-hidden="true">
+    <span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <span class="sidebar-kicker">Quiz 1</span>
+      <h2 class="sidebar-title">Key Questions</h2>
+      <button class="sidebar-close" type="button" aria-label="Close">&#10005;</button>
+    </div>
+    <nav class="sidebar-nav">
+      <a class="sidebar-link" href="#q1"  data-num="1"  data-title="Basic Elements"><span class="snum">1</span><span class="sname">Basic Elements<span class="sname-zh">基本组成</span></span></a>
+      <a class="sidebar-link" href="#q2"  data-num="2"  data-title="OS Functions"><span class="snum">2</span><span class="sname">OS Functions<span class="sname-zh">操作系统的功能</span></span></a>
+      <a class="sidebar-link" href="#q3"  data-num="3"  data-title="Processor"><span class="snum">3</span><span class="sname">Processor (CPU)<span class="sname-zh">处理器（CPU）</span></span></a>
+      <a class="sidebar-link" href="#q4"  data-num="4"  data-title="Main Memory"><span class="snum">4</span><span class="sname">Main Memory<span class="sname-zh">主存储器</span></span></a>
+      <a class="sidebar-link" href="#q5"  data-num="5"  data-title="I/O Modules"><span class="snum">5</span><span class="sname">I/O Modules<span class="sname-zh">I/O 模块</span></span></a>
+      <a class="sidebar-link" href="#q6"  data-num="6"  data-title="System Bus"><span class="snum">6</span><span class="sname">System Bus<span class="sname-zh">系统总线</span></span></a>
+      <a class="sidebar-link" href="#q7"  data-num="7"  data-title="CPU Registers"><span class="snum">7</span><span class="sname">CPU Registers<span class="sname-zh">CPU 内部寄存器</span></span></a>
+      <a class="sidebar-link" href="#q8"  data-num="8"  data-title="Program Counter"><span class="snum">8</span><span class="sname">Program Counter<span class="sname-zh">程序计数器</span></span></a>
+      <a class="sidebar-link" href="#q9"  data-num="9"  data-title="Instruction Cycle"><span class="snum">9</span><span class="sname">Instruction Cycle<span class="sname-zh">指令周期</span></span></a>
+      <a class="sidebar-link" href="#q10" data-num="10" data-title="Interrupt Classes"><span class="snum">10</span><span class="sname">Interrupt Classes<span class="sname-zh">中断的分类</span></span></a>
+      <a class="sidebar-link" href="#q11" data-num="11" data-title="Purpose of Interrupts"><span class="snum">11</span><span class="sname">Purpose of Interrupts<span class="sname-zh">中断的目的</span></span></a>
+      <a class="sidebar-link" href="#q12" data-num="12" data-title="Multiple Interrupts"><span class="snum">12</span><span class="sname">Multiple Interrupts<span class="sname-zh">多重中断</span></span></a>
+      <a class="sidebar-link" href="#q13" data-num="13" data-title="Memory Constraints"><span class="snum">13</span><span class="sname">Memory Constraints<span class="sname-zh">存储器的设计约束</span></span></a>
+      <a class="sidebar-link" href="#q14" data-num="14" data-title="Speed Cost Capacity"><span class="snum">14</span><span class="sname">Speed / Cost / Capacity<span class="sname-zh">速度·成本·容量</span></span></a>
+      <a class="sidebar-link" href="#q15" data-num="15" data-title="Principle of Locality"><span class="snum">15</span><span class="sname">Principle of Locality<span class="sname-zh">局部性原理</span></span></a>
+      <a class="sidebar-link" href="#q16" data-num="16" data-title="Secondary Memory"><span class="snum">16</span><span class="sname">Secondary Memory<span class="sname-zh">辅助存储器</span></span></a>
+      <a class="sidebar-link" href="#q17" data-num="17" data-title="Memory Hierarchy"><span class="snum">17</span><span class="sname">Memory Hierarchy<span class="sname-zh">存储层次</span></span></a>
+      <a class="sidebar-link" href="#q18" data-num="18" data-title="Cache Design"><span class="snum">18</span><span class="sname">Cache Design<span class="sname-zh">Cache 设计</span></span></a>
+      <a class="sidebar-link" href="#q19" data-num="19" data-title="Write Policy"><span class="snum">19</span><span class="sname">Write Policy<span class="sname-zh">写策略</span></span></a>
+      <a class="sidebar-link" href="#q20" data-num="20" data-title="Internal Hardware"><span class="snum">20</span><span class="sname">Internal Hardware<span class="sname-zh">内部硬件组成</span></span></a>
+      <a class="sidebar-link" href="#q21" data-num="21" data-title="Two Storages"><span class="snum">21</span><span class="sname">Two Types of Storage<span class="sname-zh">两种存储器</span></span></a>
+      <a class="sidebar-link" href="#q22" data-num="22" data-title="Motherboard"><span class="snum">22</span><span class="sname">Motherboard<span class="sname-zh">主板</span></span></a>
+      <a class="sidebar-link" href="#q23" data-num="23" data-title="Bit and Byte"><span class="snum">23</span><span class="sname">Bit &amp; Byte<span class="sname-zh">位与字节</span></span></a>
+      <a class="sidebar-link" href="#q24" data-num="24" data-title="Processor Types"><span class="snum">24</span><span class="sname">Processor Types<span class="sname-zh">处理器类型</span></span></a>
+      <a class="sidebar-link" href="#q25" data-num="25" data-title="System on a Chip"><span class="snum">25</span><span class="sname">System on a Chip<span class="sname-zh">片上系统</span></span></a>
+    </nav>
+  </aside>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <button class="btn btn-menu" type="button" data-sidebar-toggle aria-label="Toggle question list">&#9776;</button>
+        <a class="btn btn-home" href="../../index.html">&#8962; Home Page</a>
+      </div>
+      <div class="topbar-center">
+        <div class="topbar-title">Quiz 1 Key Questions<span>&middot; Consolidated recall quiz (84 marks)</span></div>
+      </div>
+      <div class="topbar-right">
+        <span class="pdf-tag">Ch01v2a.pdf &middot; Intro to HW v2.pdf</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <header class="page-head">
+      <div class="page-meta"><span>Quiz 1 &middot; Professor&rsquo;s consolidated list</span></div>
+      <h1 class="page-title reveal">Quiz 1 Key Questions</h1>
+      <p class="page-title-zh reveal">测验 1 重点回忆题 &middot; 共 84 分</p>
+      <div class="source-badge reveal">
+        Answer each question in the <strong>simplest original wording</strong> from the slides &mdash;
+        用最简单、贴近课件原文的方式作答。Every answer below is quoted from the lecture slides.
+        Click any question to reveal its <strong>English + 中文</strong> model answer.
+      </div>
+    </header>
+
+    <section class="qa-section">
+      <div class="qa-heading reveal">
+        <span class="icon">&#63;</span>
+        <span>Key Questions &middot; 1 mark per point</span>
+        <span class="count">(25 questions &middot; click to reveal)</span>
+      </div>
+
+      <!-- Q1 -->
+      <article class="qa-card reveal" id="q1">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q1</span>
+          <span class="q-text">Operating System&rsquo;s basic elements has four items. Name them.<span class="q-zh">操作系统的基本组成包含四项，请列出。</span></span>
+          <span class="q-mark">4 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Processor<span class="item-zh">处理器</span></li>
+              <li>Main Memory<span class="item-zh">主存储器</span></li>
+              <li>I/O Modules<span class="item-zh">I/O 模块</span></li>
+              <li>System Bus<span class="item-zh">系统总线</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 3 (Basic Elements of a Computer System)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q2 -->
+      <article class="qa-card reveal" id="q2">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q2</span>
+          <span class="q-text">What does an Operating System do? Give its basic functions.<span class="q-zh">操作系统的作用是什么？写出它的基本功能。</span></span>
+          <span class="q-mark">4 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Exploits the hardware resources of one or more processors<span class="item-zh">利用一个或多个处理器的硬件资源</span></li>
+              <li>Provides a set of services to system users<span class="item-zh">为系统用户提供一组服务</span></li>
+              <li>Manages secondary memory<span class="item-zh">管理二级存储器</span></li>
+              <li>Manages I/O devices<span class="item-zh">管理 I/O 设备</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 2 (Operating System)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q3 -->
+      <article class="qa-card reveal" id="q3">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q3</span>
+          <span class="q-text">What is the function of the Processor (CPU)?<span class="q-zh">处理器（CPU）的功能是什么？</span></span>
+          <span class="q-mark">3 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Controls the operation of the computer<span class="item-zh">控制计算机的运行</span></li>
+              <li>Performs the data processing functions<span class="item-zh">执行数据处理功能</span></li>
+              <li>Referred to as the Central Processing Unit (CPU)<span class="item-zh">称为中央处理器（CPU）</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Pages 4 (Processor)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q4 -->
+      <article class="qa-card reveal" id="q4">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q4</span>
+          <span class="q-text">What are the characteristics of Main Memory?<span class="q-zh">主存储器有哪些特征？</span></span>
+          <span class="q-mark">4 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Stores data and programs<span class="item-zh">存储数据和程序</span></li>
+              <li>Typically volatile<span class="item-zh">通常是易失的</span></li>
+              <li>Contents of the memory is lost when the computer is shut down<span class="item-zh">计算机关闭时存储器中的内容会丢失</span></li>
+              <li>Referred to as real memory or primary memory<span class="item-zh">称为实存储器或主存储器</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 5 (Main Memory)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q5 -->
+      <article class="qa-card reveal" id="q5">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q5</span>
+          <span class="q-text">What is the function of I/O Modules? Give examples.<span class="q-zh">I/O 模块的功能是什么？举出例子。</span></span>
+          <span class="q-mark">4 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Move data between the computer and its external environment<span class="item-zh">在计算机与外部环境之间移动数据</span></li>
+              <li>Secondary memory devices (e.g. disks)<span class="item-zh">二级存储设备（如磁盘）</span></li>
+              <li>Communications equipment<span class="item-zh">通信设备</span></li>
+              <li>Terminals<span class="item-zh">终端</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 6 (I/O Modules)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q6 -->
+      <article class="qa-card reveal" id="q6">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q6</span>
+          <span class="q-text">What does the System Bus connect / provide communication among?<span class="q-zh">系统总线连接（为哪些部件之间提供通信）？</span></span>
+          <span class="q-mark">3 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Processors<span class="item-zh">处理器</span></li>
+              <li>Main memory<span class="item-zh">主存储器</span></li>
+              <li>I/O modules<span class="item-zh">I/O 模块</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 7 (System Bus)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q7 -->
+      <article class="qa-card reveal" id="q7">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q7</span>
+          <span class="q-text">Name the three internal CPU registers shown in Figure 1.3 and what each holds.<span class="q-zh">写出图 1.3 中的三个 CPU 内部寄存器及其保存的内容。</span></span>
+          <span class="q-mark">3 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Program counter (PC) = Address of instruction<span class="item-zh">程序计数器（PC）= 指令的地址</span></li>
+              <li>Instruction register (IR) = Instruction being executed<span class="item-zh">指令寄存器（IR）= 正在执行的指令</span></li>
+              <li>Accumulator (AC) = Temporary storage<span class="item-zh">累加器（AC）= 临时存储</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 17 (Figure 1.3: Characteristics of a Hypothetical Machine)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q8 -->
+      <article class="qa-card reveal" id="q8">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q8</span>
+          <span class="q-text">What does the Program Counter (PC) hold, and when is its value increased?<span class="q-zh">程序计数器（PC）保存什么？其值何时递增？</span></span>
+          <span class="q-mark">2 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Typically the program counter (PC) holds the address of the next instruction to be fetched<span class="item-zh">通常由程序计数器（PC）保存下一条待取指令的地址</span></li>
+              <li>Its value is increased (incremented) after each instruction is fetched<span class="item-zh">每取出一条指令后，其值递增</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Pages 13 &amp; 15 (Instruction Execution; The instruction cycle)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q9 -->
+      <article class="qa-card reveal" id="q9">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q9</span>
+          <span class="q-text">What are the main steps of the instruction cycle?<span class="q-zh">指令周期的主要步骤是什么？</span></span>
+          <span class="q-mark">3 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Fetch next instruction<span class="item-zh">取下一条指令</span></li>
+              <li>Execute instruction<span class="item-zh">执行指令</span></li>
+              <li>Check for interrupt; initiate interrupt handler<span class="item-zh">检查是否有中断；启动中断处理程序</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 25 (Instruction Cycle)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q10 -->
+      <article class="qa-card reveal" id="q10">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q10</span>
+          <span class="q-text">Name the four classes of interrupt and what causes each.<span class="q-zh">写出中断的四类及其产生原因。</span></span>
+          <span class="q-mark">4 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Program: generated by an instruction execution (e.g. arithmetic overflow, division by zero, illegal instruction, bad memory reference)<span class="item-zh">程序中断：由指令执行产生（如算术溢出、除以零、非法指令、越界引用）</span></li>
+              <li>Timer: generated by a timer within the processor<span class="item-zh">定时器：由处理器内部的定时器产生</span></li>
+              <li>I/O: generated by an I/O controller (normal completion or error)<span class="item-zh">I/O：由 I/O 控制器产生（正常完成或各种错误）</span></li>
+              <li>Hardware failure: generated by a failure such as power failure or memory parity error<span class="item-zh">硬件故障：由电源故障或存储器奇偶校验错误等产生</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 20 (Classes of Interrupt)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q11 -->
+      <article class="qa-card reveal" id="q11">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q11</span>
+          <span class="q-text">Why are interrupts used in a computer system?<span class="q-zh">计算机系统中为何要使用中断？</span></span>
+          <span class="q-mark">2 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Provided to improve processor utilization<span class="item-zh">用来提高处理器的利用率</span></li>
+              <li>With interrupts, the I/O operation is concurrent with the processor executing (without interrupts the processor must wait)<span class="item-zh">有中断时 I/O 操作与处理器执行并发进行（无中断时处理器必须等待）</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Pages 19 &amp; 26 (Interrupts; Interrupt Processing)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q12 -->
+      <article class="qa-card reveal" id="q12">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q12</span>
+          <span class="q-text">What are the two approaches to handling multiple (nested) interrupts?<span class="q-zh">处理多重（嵌套）中断的两种方法是什么？</span></span>
+          <span class="q-mark">2 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Sequential interrupt processing<span class="item-zh">顺序中断处理</span></li>
+              <li>Nested interrupt processing<span class="item-zh">嵌套中断处理</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 31 (Multiple Interrupts)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q13 -->
+      <article class="qa-card reveal" id="q13">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q13</span>
+          <span class="q-text">What are the three design constraints on a computer&rsquo;s memory?<span class="q-zh">计算机存储器的三个设计约束是什么？</span></span>
+          <span class="q-mark">3 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>If the capacity is there, applications will likely be developed to use it<span class="item-zh">如果容量足够，很可能会有应用程序被开发出来使用它</span></li>
+              <li>Memory must be able to keep up with the processor<span class="item-zh">存储器必须能跟上处理器</span></li>
+              <li>Cost of memory must be reasonable in relationship to the other components<span class="item-zh">存储器的成本相对于其他部件必须合理</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 33 (Memory Hierarchy)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q14 -->
+      <article class="qa-card reveal" id="q14">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q14</span>
+          <span class="q-text">State the relationship among memory access speed, capacity and cost per bit.<span class="q-zh">说明存储器访问速度、容量与每位成本之间的关系。</span></span>
+          <span class="q-mark">3 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Faster access time = greater cost per bit<span class="item-zh">访问时间越快 = 每位的成本越高</span></li>
+              <li>Greater capacity = smaller cost per bit<span class="item-zh">容量越大 = 每位的成本越低</span></li>
+              <li>Greater capacity = slower access speed<span class="item-zh">容量越大 = 访问速度越慢</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 34 (Memory Hierarchy)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q15 -->
+      <article class="qa-card reveal" id="q15">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q15</span>
+          <span class="q-text">State the principle of locality and how it is applied in a multilevel memory.<span class="q-zh">说明局部性原理，以及它如何应用于多级存储结构。</span></span>
+          <span class="q-mark">4 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Memory references by the processor tend to cluster<span class="item-zh">处理器对存储器的引用倾向于聚集在一起</span></li>
+              <li>Data is organized so that the percentage of accesses to each successively lower level is substantially less than that of the level above<span class="item-zh">数据的组织使得对每一级更低层的访问比例都明显小于其上一级</span></li>
+              <li>Can be applied across more than two levels of memory<span class="item-zh">可以应用于两层以上的存储器</span></li>
+              <li>Exploit the principle of locality with a small, fast memory<span class="item-zh">利用局部性原理，使用一个小而快的存储器</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Pages 37 &amp; 39 (Principle of Locality; Cache)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q16 -->
+      <article class="qa-card reveal" id="q16">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q16</span>
+          <span class="q-text">What is secondary memory (auxiliary memory)?<span class="q-zh">什么是辅助存储器（secondary memory）？</span></span>
+          <span class="q-mark">4 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Also referred to as auxiliary memory<span class="item-zh">也称为辅助存储器</span></li>
+              <li>External<span class="item-zh">外部的</span></li>
+              <li>Nonvolatile<span class="item-zh">非易失的</span></li>
+              <li>Used to store program and data files<span class="item-zh">用于存储程序和数据文件</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 38 (Secondary Memory)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q17 -->
+      <article class="qa-card reveal" id="q17">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q17</span>
+          <span class="q-text">List the levels of the memory hierarchy from the CPU down to main memory.<span class="q-zh">按从 CPU 到主存储器的顺序列出存储层次的各级。</span></span>
+          <span class="q-mark">4 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Level 1 (L1) cache<span class="item-zh">第 1 级（L1）Cache</span></li>
+              <li>Level 2 (L2) cache<span class="item-zh">第 2 级（L2）Cache</span></li>
+              <li>Level 3 (L3) cache<span class="item-zh">第 3 级（L3）Cache</span></li>
+              <li>Main Memory<span class="item-zh">主存储器</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 40 (Cache / Main-Memory Structure)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q18 -->
+      <article class="qa-card reveal" id="q18">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q18</span>
+          <span class="q-text">Name the five design considerations for cache memory.<span class="q-zh">写出 Cache 设计的五个考量因素。</span></span>
+          <span class="q-mark">5 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Cache Size<span class="item-zh">Cache 大小</span></li>
+              <li>Block Size (the unit of data exchanged between cache and main memory)<span class="item-zh">块大小（Cache 与主存之间交换的数据单位）</span></li>
+              <li>Mapping Function (determines which cache location the block will occupy)<span class="item-zh">映射函数（决定该块将占用 Cache 的哪个位置）</span></li>
+              <li>Replacement Algorithm (chooses which block to replace)<span class="item-zh">替换算法（选择要替换掉哪个块）</span></li>
+              <li>Write Policy (dictates when the memory write operation takes place)<span class="item-zh">写策略（决定写操作何时发生）</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Pages 43&ndash;47 (Cache Design)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q19 -->
+      <article class="qa-card reveal" id="q19">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q19</span>
+          <span class="q-text">What are the two cache write policies?<span class="q-zh">Cache 的两种写策略是什么？</span></span>
+          <span class="q-mark">2 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Write-through: occurs every time the block is updated<span class="item-zh">写直达：每次块被更新时发生</span></li>
+              <li>Write-back: occurs when the block is replaced<span class="item-zh">写回：在块被替换时发生</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 47 (Write Policy)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q20 -->
+      <article class="qa-card reveal" id="q20">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q20</span>
+          <span class="q-text">A computer comprises hardware and software. Name the main internal hardware components.<span class="q-zh">计算机由硬件和软件组成，请列出主要的内部硬件部件。</span></span>
+          <span class="q-mark">8 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Motherboard (system board)<span class="item-zh">主板（系统板）</span></li>
+              <li>Central processing unit (CPU)<span class="item-zh">中央处理器（CPU）</span></li>
+              <li>Primary storage (RAM): volatile<span class="item-zh">主存储器（RAM）：易失</span></li>
+              <li>Secondary storage: nonvolatile<span class="item-zh">二级存储器：非易失</span></li>
+              <li>Input/output (I/O) devices<span class="item-zh">输入/输出（I/O）设备</span></li>
+              <li>Computer bus<span class="item-zh">计算机总线</span></li>
+              <li>ROM BIOS<span class="item-zh">ROM BIOS</span></li>
+              <li>Power supply (PSU)<span class="item-zh">电源（PSU）</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Intro to HW v2.pdf&rdquo; &mdash; Pages 39&ndash;40 (A Computer System)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q21 -->
+      <article class="qa-card reveal" id="q21">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q21</span>
+          <span class="q-text">What are the two types of storage, and how do they differ?<span class="q-zh">两种存储器是什么？它们有何不同？</span></span>
+          <span class="q-mark">2 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Primary storage (RAM): volatile<span class="item-zh">主存储器（RAM）：易失</span></li>
+              <li>Secondary storage: nonvolatile (permanent storage)<span class="item-zh">二级存储器：非易失（永久存储）</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Intro to HW v2.pdf&rdquo; &mdash; Pages 19, 40 (Primary / Secondary Storage)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q22 -->
+      <article class="qa-card reveal" id="q22">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q22</span>
+          <span class="q-text">What is the function of the motherboard (system board)?<span class="q-zh">主板（系统板）的功能是什么？</span></span>
+          <span class="q-mark">4 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Largest, most important circuit board<span class="item-zh">最大、最重要的电路板</span></li>
+              <li>All devices communicate with the motherboard CPU<span class="item-zh">所有设备都与主板上的 CPU 通信</span></li>
+              <li>Peripheral device links to motherboard via cable<span class="item-zh">外设通过线缆连接到主板</span></li>
+              <li>Motherboard ports may be outside of the case<span class="item-zh">主板端口可能位于机箱外部</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Intro to HW v2.pdf&rdquo; &mdash; Page 15 (The Motherboard)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q23 -->
+      <article class="qa-card reveal" id="q23">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q23</span>
+          <span class="q-text">Define a bit and a byte.<span class="q-zh">定义位（bit）和字节（byte）。</span></span>
+          <span class="q-mark">2 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>Bit: binary digit<span class="item-zh">位：二进制数字</span></li>
+              <li>Byte: eight bits<span class="item-zh">字节：八位</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Intro to HW v2.pdf&rdquo; &mdash; Page 6 (Data and Instructions)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q24 -->
+      <article class="qa-card reveal" id="q24">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q24</span>
+          <span class="q-text">Name three types of processors beyond the basic microprocessor.<span class="q-zh">除基本微处理器外，写出三种处理器类型。</span></span>
+          <span class="q-mark">3 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>GPUs (efficient computation on arrays of data using SIMD)<span class="item-zh">GPU（用 SIMD 对数组数据高效计算）</span></li>
+              <li>DSPs (deal with streaming signals such as audio or video)<span class="item-zh">DSP（处理音频或视频之类的流式信号）</span></li>
+              <li>SoC (system on a chip; other components on the same chip)<span class="item-zh">SoC（片上系统；其他部件位于同一芯片上）</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Pages 10&ndash;12 (GPUs, DSPs, SoC)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q25 -->
+      <article class="qa-card reveal" id="q25">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q25</span>
+          <span class="q-text">What is a System on a Chip (SoC)?<span class="q-zh">什么是片上系统（SoC）？</span></span>
+          <span class="q-mark">2 marks</span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <ul class="content-list">
+              <li>To satisfy handheld devices, the classic microprocessor is giving way to the SoC<span class="item-zh">为满足手持设备的需求，经典微处理器正让位于 SoC</span></li>
+              <li>Other components (DSPs, GPUs, I/O devices, main memory) and the CPUs/caches are on the same chip<span class="item-zh">除 CPU 和缓存外，DSP、GPU、I/O 设备、主存等都在同一芯片上</span></li>
+            </ul>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 12 (System on a Chip)</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="page-footer">
+      Quiz 1 Review &middot; Key Questions &mdash; every model answer is quoted directly from the lecture slides
+      (&ldquo;Ch01v2a.pdf&rdquo; and &ldquo;Intro to HW v2.pdf&rdquo;).
+    </footer>
+  </main>
+
+  <script src="../javascript/main.js"></script>
+  <script src="../javascript/animations.js"></script>
+  <script src="../javascript/speech.js"></script>
+</body>
+</html>
