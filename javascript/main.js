@@ -115,7 +115,7 @@
 
   /* ---------------------------------------- navigation transitions --- */
   function initNavTransitions() {
-    document.querySelectorAll("a.btn, a.topic-card, a.deck-card, a.edge-nav").forEach(function (link) {
+    document.querySelectorAll("a.btn, a.topic-card, a.deck-card").forEach(function (link) {
       link.addEventListener("click", function (evt) {
         var href = link.getAttribute("href");
         if (!href || href.charAt(0) === "#" || link.target === "_blank") return;
@@ -225,8 +225,8 @@
 
   /* --------------------------------------------- keyboard shortcuts -- */
   function initKeyboard() {
-    var back = document.querySelector(".btn-back, .edge-prev");
-    var next = document.querySelector(".btn-next, .edge-next");
+    var back = document.querySelector(".btn-back");
+    var next = document.querySelector(".btn-next");
     var home = document.querySelector(".btn-home");
     if (!back && !next && !home) return;
 
@@ -292,80 +292,6 @@
     }
   }
 
-  /* ----------------------------------------- edge prev/next page nav --- */
-  /* Fixed "<" / ">" buttons on the left/right screen edges that move through
-     the full, natural reading order of the site. Built here so every page gets
-     them without editing ~90 HTML documents. */
-  function initEdgeNav() {
-    var ORDER = buildOrder();
-    if (!ORDER.length) return;
-
-    var root = getSiteRoot();
-    var curPath = new URL(location.href).pathname;
-    var idx = -1;
-    for (var k = 0; k < ORDER.length; k++) {
-      if (new URL(ORDER[k], root).pathname === curPath) { idx = k; break; }
-    }
-    if (idx === -1) return; // not a known content page
-
-    if (document.querySelector(".sidebar")) document.body.classList.add("has-sidebar");
-
-    addEdge("edge-prev", "<", idx > 0 ? ORDER[idx - 1] : null, root);
-    addEdge("edge-next", ">", idx < ORDER.length - 1 ? ORDER[idx + 1] : null, root);
-
-    function addEdge(cls, label, rel, siteRoot) {
-      var a = document.createElement("a");
-      a.className = "edge-nav " + cls;
-      a.setAttribute("aria-label", cls === "edge-prev" ? "Previous page" : "Next page");
-      a.textContent = label;
-      if (rel) {
-        a.href = relPath(location.href, new URL(rel, siteRoot).href);
-        a.dataset.rel = rel;
-      } else {
-        a.classList.add("is-disabled");
-        a.setAttribute("aria-disabled", "true");
-        a.setAttribute("tabindex", "-1");
-      }
-      document.body.appendChild(a);
-    }
-  }
-
-  function buildOrder() {
-    var order = ["index.html", "pages/chapter1.html"];
-    var n;
-    for (n = 1; n <= 47; n++) order.push("pages/chapter1/page-" + pad(n) + ".html");
-    order.push("pages/intro-hw.html");
-    for (n = 1; n <= 40; n++) order.push("pages/intro-hw/page-" + pad(n) + ".html");
-    order.push("pages/Quiz1importantShortAnswer.html");
-    order.push("pages/Quiz1keyQuestions.html");
-    return order;
-  }
-
-  function pad(n) { return n < 10 ? "0" + n : "" + n; }
-
-  function getSiteRoot() {
-    var tag = document.querySelector('script[src*="main.js"]');
-    var src = tag ? tag.getAttribute("src") : "javascript/main.js";
-    var abs = new URL(src, location.href);              // .../javascript/main.js
-    var dir = abs.href.substring(0, abs.href.lastIndexOf("/") + 1); // .../javascript/
-    // go up one more level, to the site root (don't count the trailing slash)
-    return dir.substring(0, dir.lastIndexOf("/", dir.length - 2) + 1); // .../  (site root)
-  }
-
-  function relPath(from, to) {
-    var f = new URL(from), t = new URL(to);
-    if (f.origin !== t.origin) return to;
-    var af = f.pathname.split("/").filter(Boolean);
-    var at = t.pathname.split("/").filter(Boolean);
-    var i = 0;
-    while (i < af.length - 1 && i < at.length - 1 && af[i] === at[i]) i++;
-    var up = af.length - 1 - i;
-    var parts = [];
-    for (var j = 0; j < up; j++) parts.push("..");
-    for (var m = i; m < at.length; m++) parts.push(at[m]);
-    return parts.join("/") || "./";
-  }
-
   /* ------------------------------------------------------- boot ------ */
   document.addEventListener("DOMContentLoaded", function () {
     syncTopbarHeight();
@@ -373,7 +299,6 @@
     initReveal();
     initQA();
     initRipple();
-    initEdgeNav();
     initNavTransitions();
     initProgress();
     initFilter();
