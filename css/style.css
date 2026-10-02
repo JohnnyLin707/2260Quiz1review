@@ -1138,3 +1138,72 @@ kbd {
   .hq-field { flex: 1 1 100%; }
   .hq-score { margin-left: 0; width: 100%; text-align: right; }
 }
+
+/* =====================================================================
+   EDGE PAGE NAV — fixed < (prev) / > (next) buttons on every page.
+   Desktop: left arrow clears the permanent sidebar; Tablet/Phone: pinned
+   to the screen edges, sized for touch.
+   ===================================================================== */
+.edge-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 70;
+  display: flex; align-items: center; justify-content: center;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  font-family: var(--sans, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif);
+  font-size: 1.6rem; font-weight: 700; line-height: 1;
+  color: #e7eef8; text-decoration: none;
+  background: rgba(13, 20, 38, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.45);
+  backdrop-filter: blur(9px) saturate(140%);
+  -webkit-backdrop-filter: blur(9px) saturate(140%);
+  cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent;
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease,
+              opacity .2s ease, border-color .2s ease, color .2s ease;
+}
+.edge-nav:hover {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: rgba(94, 234, 212, 0.55);
+  box-shadow: 0 12px 34px rgba(2, 6, 23, 0.55);
+  transform: translateY(-50%) scale(1.07); color: #fff;
+}
+.edge-nav:active { transform: translateY(-50%) scale(0.95); }
+.edge-nav:focus-visible { outline: 2px solid rgba(94, 234, 212, 0.7); outline-offset: 2px; }
+.edge-prev { left: 12px; }
+.edge-next { right: 12px; }
+.edge-nav.is-disabled { opacity: 0.22; pointer-events: none; filter: grayscale(0.5); }
+
+/* Desktop: keep the left arrow clear of the permanent left sidebar */
+@media (min-width: 1024px) {
+  body.has-sidebar .edge-prev { left: calc(var(--sidebar-w) + 14px); }
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .edge-nav { width: 44px; height: 44px; font-size: 1.45rem; }
+  .edge-prev { left: 9px; }
+  .edge-next { right: 9px; }
+}
+
+/* Large phone */
+@media (max-width: 560px) {
+  .edge-nav { width: 42px; height: 42px; font-size: 1.3rem; }
+  .edge-prev { left: 7px; }
+  .edge-next { right: 7px; }
+}
+
+/* Small phone */
+@media (max-width: 380px) {
+  .edge-nav { width: 38px; height: 38px; font-size: 1.15rem; }
+  .edge-prev { left: 5px; }
+  .edge-next { right: 5px; }
+}
+
+/* Respect reduced-motion: drop the scale animation only */
+@media (prefers-reduced-motion: reduce) {
+  .edge-nav { transition: background .2s ease, opacity .2s ease, border-color .2s ease; }
+  .edge-nav:hover, .edge-nav:active { transform: translateY(-50%); }
+}
