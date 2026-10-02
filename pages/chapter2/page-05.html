@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070b16'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%235eead4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2360a5fa'/%3E%3C/svg%3E">
+  <title>Operating System Services &mdash; Ch02v2a.pdf (Slide 5) | Quiz 1 Review</title>
+  <meta name="description" content="Quiz 1 review notes excerpted from Ch02v2a.pdf, page 5: Operating System Services">
+  <link rel="stylesheet" href="../../css/style.css">
+  <noscript><style>.reveal{opacity:1 !important}</style></noscript>
+</head>
+<body class="review-page has-sidebar" data-topic="chapter2" data-page="5">
+
+  <div class="animated-bg" aria-hidden="true">
+    <span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <aside class="sidebar" id="sidebar" aria-label="Slide navigation">
+    <div class="sidebar-head">
+      <span class="sidebar-title">Slides</span>
+      <button class="sidebar-close" type="button" aria-label="Close navigation">&#10005;</button>
+    </div>
+    <div class="sidebar-search">
+      <input class="sidebar-filter" type="search" placeholder="Jump to slide&hellip;" aria-label="Filter slides">
+    </div>
+    <nav class="sidebar-list">
+        <a class="sidebar-link" href="page-01.html" data-num="01" data-title="Title Slide">
+          <span class="snum">01</span>
+          <span class="sname">Title Slide<span class="sname-zh">第 2 章 标题页</span></span>
+        </a>
+        <a class="sidebar-link" href="page-02.html" data-num="02" data-title="Operating System">
+          <span class="snum">02</span>
+          <span class="sname">Operating System<span class="sname-zh">操作系统</span></span>
+        </a>
+        <a class="sidebar-link" href="page-03.html" data-num="03" data-title="Figure 2.1: Computer Hardware and Software Infrastructure">
+          <span class="snum">03</span>
+          <span class="sname">Figure 2.1: Computer Hardware and Software Infrastructure<span class="sname-zh">图 2.1：计算机硬件与软件基础设施</span></span>
+        </a>
+        <a class="sidebar-link" href="page-04.html" data-num="04" data-title="Key Interfaces">
+          <span class="snum">04</span>
+          <span class="sname">Key Interfaces<span class="sname-zh">关键接口</span></span>
+        </a>
+        <a class="sidebar-link active" href="page-05.html" data-num="05" data-title="Operating System Services">
+          <span class="snum">05</span>
+          <span class="sname">Operating System Services<span class="sname-zh">操作系统提供的服务</span></span>
+        </a>
+        <a class="sidebar-link" href="page-06.html" data-num="06" data-title="The Operating System as Resource Manager">
+          <span class="snum">06</span>
+          <span class="sname">The Operating System as Resource Manager<span class="sname-zh">作为资源管理器的操作系统</span></span>
+        </a>
+        <a class="sidebar-link" href="page-07.html" data-num="07" data-title="Operating System as Resource Manager (Software View)">
+          <span class="snum">07</span>
+          <span class="sname">Operating System as Resource Manager (Software View)<span class="sname-zh">操作系统作为资源管理器（软件角度）</span></span>
+        </a>
+        <a class="sidebar-link" href="page-08.html" data-num="08" data-title="Figure 2.2: The Operating System as Resource Manager">
+          <span class="snum">08</span>
+          <span class="sname">Figure 2.2: The Operating System as Resource Manager<span class="sname-zh">图 2.2：操作系统作为资源管理器</span></span>
+        </a>
+        <a class="sidebar-link" href="page-09.html" data-num="09" data-title="Evolution of Operating Systems — Reasons">
+          <span class="snum">09</span>
+          <span class="sname">Evolution of Operating Systems — Reasons<span class="sname-zh">操作系统的发展演进（原因）</span></span>
+        </a>
+        <a class="sidebar-link" href="page-10.html" data-num="10" data-title="Evolution of Operating Systems — Stages">
+          <span class="snum">10</span>
+          <span class="sname">Evolution of Operating Systems — Stages<span class="sname-zh">操作系统的发展演进（阶段）</span></span>
+        </a>
+        <a class="sidebar-link" href="page-11.html" data-num="11" data-title="Serial Processing">
+          <span class="snum">11</span>
+          <span class="sname">Serial Processing<span class="sname-zh">串行处理</span></span>
+        </a>
+        <a class="sidebar-link" href="page-12.html" data-num="12" data-title="Simple Batch Systems">
+          <span class="snum">12</span>
+          <span class="sname">Simple Batch Systems<span class="sname-zh">简单批处理系统</span></span>
+        </a>
+        <a class="sidebar-link" href="page-13.html" data-num="13" data-title="Monitor Point of View">
+          <span class="snum">13</span>
+          <span class="sname">Monitor Point of View<span class="sname-zh">监控程序的视角</span></span>
+        </a>
+        <a class="sidebar-link" href="page-14.html" data-num="14" data-title="Processor Point of View">
+          <span class="snum">14</span>
+          <span class="sname">Processor Point of View<span class="sname-zh">处理器的视角</span></span>
+        </a>
+        <a class="sidebar-link" href="page-15.html" data-num="15" data-title="Job Control Language (JCL)">
+          <span class="snum">15</span>
+          <span class="sname">Job Control Language (JCL)<span class="sname-zh">作业控制语言（JCL）</span></span>
+        </a>
+        <a class="sidebar-link" href="page-16.html" data-num="16" data-title="Desirable Hardware Features">
+          <span class="snum">16</span>
+          <span class="sname">Desirable Hardware Features<span class="sname-zh">理想的硬件特性</span></span>
+        </a>
+        <a class="sidebar-link" href="page-17.html" data-num="17" data-title="Modes of Operation">
+          <span class="snum">17</span>
+          <span class="sname">Modes of Operation<span class="sname-zh">处理器的两种工作模式</span></span>
+        </a>
+        <a class="sidebar-link" href="page-18.html" data-num="18" data-title="Simple Batch System Overhead">
+          <span class="snum">18</span>
+          <span class="sname">Simple Batch System Overhead<span class="sname-zh">简单批处理系统的开销</span></span>
+        </a>
+        <a class="sidebar-link" href="page-19.html" data-num="19" data-title="Multiprogrammed Batch Systems">
+          <span class="snum">19</span>
+          <span class="sname">Multiprogrammed Batch Systems<span class="sname-zh">多道程序批处理系统</span></span>
+        </a>
+        <a class="sidebar-link" href="page-20.html" data-num="20" data-title="Figure 2.4: Multiprogramming Resource Use">
+          <span class="snum">20</span>
+          <span class="sname">Figure 2.4: Multiprogramming Resource Use<span class="sname-zh">图 2.4：多道程序设计的资源使用</span></span>
+        </a>
+        <a class="sidebar-link" href="page-21.html" data-num="21" data-title="Uniprogramming (Figure 2.5)">
+          <span class="snum">21</span>
+          <span class="sname">Uniprogramming (Figure 2.5)<span class="sname-zh">单道程序设计（图 2.5）</span></span>
+        </a>
+        <a class="sidebar-link" href="page-22.html" data-num="22" data-title="Multiprogramming">
+          <span class="snum">22</span>
+          <span class="sname">Multiprogramming<span class="sname-zh">多道程序设计</span></span>
+        </a>
+        <a class="sidebar-link" href="page-23.html" data-num="23" data-title="Multiprogramming (continued)">
+          <span class="snum">23</span>
+          <span class="sname">Multiprogramming (continued)<span class="sname-zh">多道程序设计（续）</span></span>
+        </a>
+        <a class="sidebar-link" href="page-24.html" data-num="24" data-title="Table 2.1: Multiprogramming Example Attributes">
+          <span class="snum">24</span>
+          <span class="sname">Table 2.1: Multiprogramming Example Attributes<span class="sname-zh">表 2.1：多道程序设计示例的作业属性</span></span>
+        </a>
+        <a class="sidebar-link" href="page-25.html" data-num="25" data-title="Table 2.2: Effects of Multiprogramming on Resource Utilization">
+          <span class="snum">25</span>
+          <span class="sname">Table 2.2: Effects of Multiprogramming on Resource Utilization<span class="sname-zh">表 2.2：多道程序设计对资源利用率的影响</span></span>
+        </a>
+        <a class="sidebar-link" href="page-26.html" data-num="26" data-title="Figure 2.6: Utilization Histograms">
+          <span class="snum">26</span>
+          <span class="sname">Figure 2.6: Utilization Histograms<span class="sname-zh">图 2.6：资源利用率直方图</span></span>
+        </a>
+        <a class="sidebar-link" href="page-27.html" data-num="27" data-title="Time-Sharing Systems">
+          <span class="snum">27</span>
+          <span class="sname">Time-Sharing Systems<span class="sname-zh">分时系统</span></span>
+        </a>
+        <a class="sidebar-link" href="page-28.html" data-num="28" data-title="Table 2.3: Batch Multiprogramming versus Time Sharing">
+          <span class="snum">28</span>
+          <span class="sname">Table 2.3: Batch Multiprogramming versus Time Sharing<span class="sname-zh">表 2.3：批处理多道程序设计与分时系统的比较</span></span>
+        </a>
+        <a class="sidebar-link" href="page-29.html" data-num="29" data-title="Compatible Time-Sharing System (CTSS)">
+          <span class="snum">29</span>
+          <span class="sname">Compatible Time-Sharing System (CTSS)<span class="sname-zh">兼容分时系统（CTSS）</span></span>
+        </a>
+        <a class="sidebar-link" href="page-30.html" data-num="30" data-title="Figure 2.7: CTSS Operation">
+          <span class="snum">30</span>
+          <span class="sname">Figure 2.7: CTSS Operation<span class="sname-zh">图 2.7：CTSS 的运行过程</span></span>
+        </a>
+        <a class="sidebar-link" href="page-31.html" data-num="31" data-title="Major Achievements">
+          <span class="snum">31</span>
+          <span class="sname">Major Achievements<span class="sname-zh">操作系统发展的主要成就</span></span>
+        </a>
+        <a class="sidebar-link" href="page-32.html" data-num="32" data-title="Process">
+          <span class="snum">32</span>
+          <span class="sname">Process<span class="sname-zh">进程</span></span>
+        </a>
+        <a class="sidebar-link" href="page-33.html" data-num="33" data-title="Causes of Errors">
+          <span class="snum">33</span>
+          <span class="sname">Causes of Errors<span class="sname-zh">产生差错的原因</span></span>
+        </a>
+        <a class="sidebar-link" href="page-34.html" data-num="34" data-title="Components of a Process">
+          <span class="snum">34</span>
+          <span class="sname">Components of a Process<span class="sname-zh">进程的组成部分</span></span>
+        </a>
+        <a class="sidebar-link" href="page-35.html" data-num="35" data-title="Process Management (Figure 2.8)">
+          <span class="snum">35</span>
+          <span class="sname">Process Management (Figure 2.8)<span class="sname-zh">进程管理（图 2.8）</span></span>
+        </a>
+        <a class="sidebar-link" href="page-36.html" data-num="36" data-title="Memory Management">
+          <span class="snum">36</span>
+          <span class="sname">Memory Management<span class="sname-zh">存储器管理</span></span>
+        </a>
+        <a class="sidebar-link" href="page-37.html" data-num="37" data-title="Virtual Memory">
+          <span class="snum">37</span>
+          <span class="sname">Virtual Memory<span class="sname-zh">虚拟存储器</span></span>
+        </a>
+        <a class="sidebar-link" href="page-38.html" data-num="38" data-title="Paging">
+          <span class="snum">38</span>
+          <span class="sname">Paging<span class="sname-zh">分页</span></span>
+        </a>
+        <a class="sidebar-link" href="page-39.html" data-num="39" data-title="Figure 2.9: Virtual Memory Concepts">
+          <span class="snum">39</span>
+          <span class="sname">Figure 2.9: Virtual Memory Concepts<span class="sname-zh">图 2.9：虚拟存储器的概念</span></span>
+        </a>
+        <a class="sidebar-link" href="page-40.html" data-num="40" data-title="Figure 2.10: Virtual Memory Addressing">
+          <span class="snum">40</span>
+          <span class="sname">Figure 2.10: Virtual Memory Addressing<span class="sname-zh">图 2.10：虚拟存储器寻址</span></span>
+        </a>
+        <a class="sidebar-link" href="page-41.html" data-num="41" data-title="Information Protection and Security">
+          <span class="snum">41</span>
+          <span class="sname">Information Protection and Security<span class="sname-zh">信息保护与安全</span></span>
+        </a>
+        <a class="sidebar-link" href="page-42.html" data-num="42" data-title="Scheduling and Resource Management">
+          <span class="snum">42</span>
+          <span class="sname">Scheduling and Resource Management<span class="sname-zh">调度与资源管理</span></span>
+        </a>
+        <a class="sidebar-link" href="page-43.html" data-num="43" data-title="Resource Allocation Policies in Detail">
+          <span class="snum">43</span>
+          <span class="sname">Resource Allocation Policies in Detail<span class="sname-zh">资源分配策略详解</span></span>
+        </a>
+        <a class="sidebar-link" href="page-44.html" data-num="44" data-title="Figure 2.11: Key Elements of an Operating System for Multiprogramming">
+          <span class="snum">44</span>
+          <span class="sname">Figure 2.11: Key Elements of an Operating System for Multiprogramming<span class="sname-zh">图 2.11：支持多道程序设计的操作系统关键要素</span></span>
+        </a>
+        <a class="sidebar-link" href="page-45.html" data-num="45" data-title="Process Queues">
+          <span class="snum">45</span>
+          <span class="sname">Process Queues<span class="sname-zh">进程队列</span></span>
+        </a>
+        <a class="sidebar-link" href="page-46.html" data-num="46" data-title="Different Architectural Approaches">
+          <span class="snum">46</span>
+          <span class="sname">Different Architectural Approaches<span class="sname-zh">不同的体系结构方案</span></span>
+        </a>
+        <a class="sidebar-link" href="page-47.html" data-num="47" data-title="Monolithic Kernel">
+          <span class="snum">47</span>
+          <span class="sname">Monolithic Kernel<span class="sname-zh">单体内核</span></span>
+        </a>
+        <a class="sidebar-link" href="page-48.html" data-num="48" data-title="Microkernel Architecture">
+          <span class="snum">48</span>
+          <span class="sname">Microkernel Architecture<span class="sname-zh">微内核体系结构</span></span>
+        </a>
+        <a class="sidebar-link" href="page-49.html" data-num="49" data-title="Multithreading">
+          <span class="snum">49</span>
+          <span class="sname">Multithreading<span class="sname-zh">多线程</span></span>
+        </a>
+        <a class="sidebar-link" href="page-50.html" data-num="50" data-title="Symmetric Multiprocessing (SMP)">
+          <span class="snum">50</span>
+          <span class="sname">Symmetric Multiprocessing (SMP)<span class="sname-zh">对称多处理（SMP）</span></span>
+        </a>
+        <a class="sidebar-link" href="page-51.html" data-num="51" data-title="SMP Advantages">
+          <span class="snum">51</span>
+          <span class="sname">SMP Advantages<span class="sname-zh">SMP 的优点</span></span>
+        </a>
+        <a class="sidebar-link" href="page-52.html" data-num="52" data-title="Figure 2.12: Multiprogramming and Multiprocessing">
+          <span class="snum">52</span>
+          <span class="sname">Figure 2.12: Multiprogramming and Multiprocessing<span class="sname-zh">图 2.12：多道程序设计与多处理</span></span>
+        </a>
+        <a class="sidebar-link" href="page-53.html" data-num="53" data-title="OS Design: Distributed and Object-Oriented">
+          <span class="snum">53</span>
+          <span class="sname">OS Design: Distributed and Object-Oriented<span class="sname-zh">操作系统设计：分布式与面向对象</span></span>
+        </a>
+        <a class="sidebar-link" href="page-54.html" data-num="54" data-title="Fault Tolerance">
+          <span class="snum">54</span>
+          <span class="sname">Fault Tolerance<span class="sname-zh">容错</span></span>
+        </a>
+        <a class="sidebar-link" href="page-55.html" data-num="55" data-title="Fundamental Concepts of Reliability">
+          <span class="snum">55</span>
+          <span class="sname">Fundamental Concepts of Reliability<span class="sname-zh">可靠性的基本概念</span></span>
+        </a>
+        <a class="sidebar-link" href="page-56.html" data-num="56" data-title="Figure 2.13: System Operational States">
+          <span class="snum">56</span>
+          <span class="sname">Figure 2.13: System Operational States<span class="sname-zh">图 2.13：系统的运行状态</span></span>
+        </a>
+        <a class="sidebar-link" href="page-57.html" data-num="57" data-title="Faults">
+          <span class="snum">57</span>
+          <span class="sname">Faults<span class="sname-zh">故障的定义与成因</span></span>
+        </a>
+        <a class="sidebar-link" href="page-58.html" data-num="58" data-title="Fault Categories">
+          <span class="snum">58</span>
+          <span class="sname">Fault Categories<span class="sname-zh">故障的分类</span></span>
+        </a>
+        <a class="sidebar-link" href="page-59.html" data-num="59" data-title="Methods of Redundancy">
+          <span class="snum">59</span>
+          <span class="sname">Methods of Redundancy<span class="sname-zh">冗余的实现方式</span></span>
+        </a>
+        <a class="sidebar-link" href="page-60.html" data-num="60" data-title="Operating System Mechanisms">
+          <span class="snum">60</span>
+          <span class="sname">Operating System Mechanisms<span class="sname-zh">操作系统的容错机制</span></span>
+        </a>
+        <a class="sidebar-link" href="page-61.html" data-num="61" data-title="Microsoft Windows History">
+          <span class="snum">61</span>
+          <span class="sname">Microsoft Windows History<span class="sname-zh">Microsoft Windows 的发展历程</span></span>
+        </a>
+        <a class="sidebar-link" href="page-62.html" data-num="62" data-title="Figure 2.14: Windows Architecture">
+          <span class="snum">62</span>
+          <span class="sname">Figure 2.14: Windows Architecture<span class="sname-zh">图 2.14：Windows 体系结构</span></span>
+        </a>
+        <a class="sidebar-link" href="page-63.html" data-num="63" data-title="Kernel-Mode Components of Windows">
+          <span class="snum">63</span>
+          <span class="sname">Kernel-Mode Components of Windows<span class="sname-zh">Windows 的内核态组成部分</span></span>
+        </a>
+        <a class="sidebar-link" href="page-64.html" data-num="64" data-title="Windows Executive Components (Part 1)">
+          <span class="snum">64</span>
+          <span class="sname">Windows Executive Components (Part 1)<span class="sname-zh">Windows 执行体组件（一）</span></span>
+        </a>
+        <a class="sidebar-link" href="page-65.html" data-num="65" data-title="Windows Executive Components (Part 2)">
+          <span class="snum">65</span>
+          <span class="sname">Windows Executive Components (Part 2)<span class="sname-zh">Windows 执行体组件（二）</span></span>
+        </a>
+        <a class="sidebar-link" href="page-66.html" data-num="66" data-title="User-Mode Processes in Windows">
+          <span class="snum">66</span>
+          <span class="sname">User-Mode Processes in Windows<span class="sname-zh">Windows 的用户态进程</span></span>
+        </a>
+        <a class="sidebar-link" href="page-67.html" data-num="67" data-title="Client/Server Model">
+          <span class="snum">67</span>
+          <span class="sname">Client/Server Model<span class="sname-zh">客户/服务器模型</span></span>
+        </a>
+        <a class="sidebar-link" href="page-68.html" data-num="68" data-title="Threads and SMP">
+          <span class="snum">68</span>
+          <span class="sname">Threads and SMP<span class="sname-zh">线程与对称多处理</span></span>
+        </a>
+        <a class="sidebar-link" href="page-69.html" data-num="69" data-title="Traditional UNIX Systems">
+          <span class="snum">69</span>
+          <span class="sname">Traditional UNIX Systems<span class="sname-zh">传统 UNIX 系统</span></span>
+        </a>
+        <a class="sidebar-link" href="page-70.html" data-num="70" data-title="Linux Overview">
+          <span class="snum">70</span>
+          <span class="sname">Linux Overview<span class="sname-zh">Linux 概述</span></span>
+        </a>
+        <a class="sidebar-link" href="page-71.html" data-num="71" data-title="Linux Modular Structure">
+          <span class="snum">71</span>
+          <span class="sname">Linux Modular Structure<span class="sname-zh">Linux 的模块化结构</span></span>
+        </a>
+        <a class="sidebar-link" href="page-72.html" data-num="72" data-title="Figure 2.19: Linux Kernel Components">
+          <span class="snum">72</span>
+          <span class="sname">Figure 2.19: Linux Kernel Components<span class="sname-zh">图 2.19：Linux 内核组件</span></span>
+        </a>
+        <a class="sidebar-link" href="page-73.html" data-num="73" data-title="Android Operating System">
+          <span class="snum">73</span>
+          <span class="sname">Android Operating System<span class="sname-zh">Android 操作系统</span></span>
+        </a>
+        <a class="sidebar-link" href="page-74.html" data-num="74" data-title="Figure 2.20: Android Software Architecture">
+          <span class="snum">74</span>
+          <span class="sname">Figure 2.20: Android Software Architecture<span class="sname-zh">图 2.20：Android 软件体系结构</span></span>
+        </a>
+        <a class="sidebar-link" href="page-75.html" data-num="75" data-title="Figure 2.22: Android System Architecture">
+          <span class="snum">75</span>
+          <span class="sname">Figure 2.22: Android System Architecture<span class="sname-zh">图 2.22：Android 系统体系结构</span></span>
+        </a>
+    </nav>
+  </aside>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <button class="btn btn-menu" type="button" data-sidebar-toggle aria-label="Toggle navigation">&#9776;</button>
+        <a class="btn btn-home" href="https://johnnylin707.github.io/CSIS-2260review/index.html">&#8962; Home Page</a>
+      </div>
+      <div class="topbar-center">
+        <div class="topbar-title">Chapter 2: Operating System Overview<span>&middot; Slide 5 of 75</span></div>
+      </div>
+      <div class="topbar-right">
+        <span class="pdf-tag">Ch02v2a.pdf</span>
+      </div>
+    </div>
+    <div class="progress-track"><div class="progress-bar" data-progress="6.7"></div></div>
+  </header>
+
+  <main class="page-wrap">
+    <header class="page-head">
+      <div class="page-meta"><span>Slide 5 / 75</span></div>
+      <h1 class="page-title reveal">Operating System Services</h1>
+      <p class="page-title-zh reveal">操作系统提供的服务</p>
+      <div class="source-badge reveal">Excerpted from &ldquo;Ch02v2a.pdf&rdquo; &mdash; Page 5</div>
+    </header>
+        <figure class="slide-figure reveal">
+      <img class="slide-image" src="../../Ch02v2a-images/Ch02v2a-images-4.jpg" alt="Original slide from Ch02v2a.pdf &mdash; slide 5: Operating System Services" loading="lazy" decoding="async">
+    </figure>
+
+    <section class="panel original reveal">
+      <h2>Original Content (verbatim)</h2>
+<ul class="content-list">
+        <li>Program development: editor, debugger<span class="item-zh">程序开发：编辑器、调试器</span></li>
+        <li>Program execution: resource scheduling and allocation, loading of programs/data<span class="item-zh">程序执行：资源的调度与分配、程序与数据的装入</span></li>
+        <li>Access I/O devices: hide details of different devices<span class="item-zh">访问 I/O 设备：隐藏不同设备的细节</span></li>
+        <li>Controlled access to files<span class="item-zh">对文件的受控访问</span></li>
+        <li>System access: protect system resources<span class="item-zh">系统访问：保护系统资源</span></li>
+        <li>Error detection and response<span class="item-zh">错误检测与响应</span></li>
+        <li>Accounting: monitor resource usages by individual users<span class="item-zh">记账：监视各个用户对资源的使用情况</span></li>
+      </ul>
+    </section>
+
+    <section class="qa-section">
+      <div class="qa-heading reveal">
+        <span class="icon">&#63;</span>
+        <span>Possible Exam Questions</span>
+        <span class="count">(3 questions &middot; click to reveal)</span>
+      </div>
+
+      <article class="qa-card reveal">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q1</span>
+          <span class="q-text">Which services does the OS provide for program development and execution?<span class="q-zh">操作系统为程序的开发与执行提供哪些服务？</span></span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en">Program development (editor, debugger) and program execution (resource scheduling and allocation, loading of programs/data).</p>
+            <p class="ans-zh">即程序开发（编辑器、调试器）与程序执行（资源调度与分配、程序与数据的装入）。</p>
+            <span class="src">Source: &ldquo;Ch02v2a.pdf&rdquo; &mdash; Page 5</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q2</span>
+          <span class="q-text">How does the OS handle access to I/O devices?<span class="q-zh">操作系统如何处理对 I/O 设备的访问？</span></span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en">It hides details of different devices.</p>
+            <p class="ans-zh">即隐藏不同设备的细节。</p>
+            <span class="src">Source: &ldquo;Ch02v2a.pdf&rdquo; &mdash; Page 5</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q3</span>
+          <span class="q-text">What is the accounting service?<span class="q-zh">记账（Accounting）服务是什么？</span></span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en">Monitoring resource usages by individual users.</p>
+            <p class="ans-zh">即监视各个用户对资源的使用情况。</p>
+            <span class="src">Source: &ldquo;Ch02v2a.pdf&rdquo; &mdash; Page 5</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <nav class="bottom-nav" aria-label="Slide navigation">
+      <a class="btn btn-back" href="page-04.html">&#8592; Back</a>
+      <a class="btn btn-next" href="page-06.html">Next &#8594;</a>
+    </nav>
+
+    <div class="kbd-hint">
+      <kbd>&#8592;</kbd> Back &nbsp; <kbd>&#8594;</kbd> Next &nbsp; <kbd>Esc</kbd> Home
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    Quiz 1 Review &middot; Chapter 2: Operating System Overview &middot; slide content is quoted directly from &ldquo;Ch02v2a.pdf&rdquo;.
+  </footer>
+
+  <script src="../../javascript/main.js"></script>
+  <script src="../../javascript/animations.js"></script>
+  <script src="../../javascript/speech.js"></script>
+</body>
+</html>

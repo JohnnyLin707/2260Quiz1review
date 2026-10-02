@@ -78,7 +78,7 @@
     else { u.lang = "en-US"; }
     u.rate = 0.95;
     u.pitch = 1;
-    u.volume = 0.2; // 20% of the API default (1.0)
+    u.volume = 0.25; // 25% of the API default (1.0)
 
     function done() {
       if (currentEl === el) {

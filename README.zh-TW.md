@@ -2,7 +2,7 @@
 
 > 🌐 **Languages / 语言 / 語言**: [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md)
 
-https://johnnylin707.github.io/2260Quiz1review/index.html
+https://johnnylin707.github.io/CSIS-2260review/index.html
 
 一個零依賴的靜態複習網站，用於**作業系統第一次小考（Quiz 1）**。到目前為止上過的每一張課程投影片都被單獨做成一個頁面，包含**英文原文**、**逐行中文翻譯**，以及一組**可能出現的考題**（點擊即可展開答案）。除此之外，現在還多了兩套**可以自己作答並自動批改**的練習題。
 
@@ -83,7 +83,7 @@ https://johnnylin707.github.io/2260Quiz1review/index.html
 ## 目錄結構
 
 ```
-2260Quiz1review/
+CSIS-2260review/
 ├── index.html                 # 首頁 —— 選擇複習單元 + 10 題填空練習
 ├── css/
 │   └── style.css              # 全部樣式（深色主題、答案強調、練習模組）
@@ -114,7 +114,7 @@ https://johnnylin707.github.io/2260Quiz1review/index.html
 
 ### 方式二 —— 本機伺服器（推薦）
 ```bash
-cd 2260Quiz1review
+cd CSIS-2260review
 python3 -m http.server 8000
 # 然後開啟 http://localhost:8000
 ```

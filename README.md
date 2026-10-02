@@ -2,7 +2,7 @@
 
 > 🌐 **Languages / 语言 / 語言**: [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md)
 
-https://johnnylin707.github.io/2260Quiz1review/index.html
+https://johnnylin707.github.io/CSIS-2260review/index.html
 
 A static, dependency-free review site for **Operating Systems Quiz 1**. Every lecture slide covered so far has been turned into its own page containing the **verbatim original text**, a **line-by-line Chinese translation**, and a set of **possible exam questions** with answers you can reveal by clicking. On top of the slide pages there are now two **write-and-check drills** with answer boxes that are marked automatically.
 
@@ -83,7 +83,7 @@ Both drills mark what you write automatically:
 ## Project structure
 
 ```
-2260Quiz1review/
+CSIS-2260review/
 ├── index.html                 # Home page — pick a deck + the 10-question drill
 ├── css/
 │   └── style.css              # All styling (dark theme, answer highlighting, drills)
@@ -114,7 +114,7 @@ Double-click `index.html` to open it in your browser. This works, but some brows
 
 ### Option B — local server (recommended)
 ```bash
-cd 2260Quiz1review
+cd CSIS-2260review
 python3 -m http.server 8000
 # then open http://localhost:8000
 ```

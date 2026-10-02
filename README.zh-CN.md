@@ -2,7 +2,7 @@
 
 > 🌐 **Languages / 语言 / 語言**: [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md)
 
-https://johnnylin707.github.io/2260Quiz1review/index.html
+https://johnnylin707.github.io/CSIS-2260review/index.html
 
 一个零依赖的静态复习网站，用于**操作系统第一次测验（Quiz 1）**。到目前为止讲过的每张课件幻灯片都被单独做成一个页面，包含**英文原文**、**逐行中文翻译**，以及一组**可能出现的考题**（点击即可展开答案）。在此之外，现在还多了两套**可以自己作答并自动判分**的练习题。
 
@@ -83,7 +83,7 @@ https://johnnylin707.github.io/2260Quiz1review/index.html
 ## 目录结构
 
 ```
-2260Quiz1review/
+CSIS-2260review/
 ├── index.html                 # 首页 —— 选择复习单元 + 10 道填空题练习
 ├── css/
 │   └── style.css              # 全部样式（深色主题、答案高亮、练习模块）
@@ -114,7 +114,7 @@ https://johnnylin707.github.io/2260Quiz1review/index.html
 
 ### 方式二 —— 本地服务器（推荐）
 ```bash
-cd 2260Quiz1review
+cd CSIS-2260review
 python3 -m http.server 8000
 # 然后访问 http://localhost:8000
 ```
