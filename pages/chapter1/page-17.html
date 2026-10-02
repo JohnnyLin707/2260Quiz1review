@@ -245,27 +245,54 @@
 
     <section class="panel original reveal">
       <h2>Original Content (verbatim)</h2>
-      <p class="figure-caption">Figure-only slide (no textual content on the slide besides the page number).<span class="item-zh">纯图片页（除页码外该页没有文字内容）。</span></p>
+      <p class="figure-caption">Figure 1.3 &mdash; Characteristics of a Hypothetical Machine<span class="item-zh">图 1.3 &mdash;&mdash; 假想机器的特征</span></p>
+      <ul class="content-list">
+        <li>(a) Instruction format: Opcode (bits 0&ndash;3) + Address (bits 4&ndash;15)<span class="item-zh">(a) 指令格式：操作码（第 0&ndash;3 位）+ 地址（第 4&ndash;15 位）</span></li>
+        <li>(b) Integer format: S = sign bit (bit 0) + Magnitude (bits 1&ndash;15)<span class="item-zh">(b) 整数格式：S = 符号位（第 0 位）+ 数值位（第 1&ndash;15 位）</span></li>
+        <li>(c) Internal CPU registers<span class="item-zh">(c) CPU 内部寄存器</span></li>
+        <li class="sub">Program counter (PC) = Address of instruction<span class="item-zh">程序计数器（PC）= 指令的地址</span></li>
+        <li class="sub">Instruction register (IR) = Instruction being executed<span class="item-zh">指令寄存器（IR）= 正在执行的指令</span></li>
+        <li class="sub">Accumulator (AC) = Temporary storage<span class="item-zh">累加器（AC）= 临时存储</span></li>
+        <li>(d) Partial list of opcodes<span class="item-zh">(d) 操作码（部分列表）</span></li>
+        <li class="sub">0001 = Load AC from memory<span class="item-zh">0001 = 从存储器加载 AC（把数据从内存读入累加器）</span></li>
+        <li class="sub">0010 = Store AC to memory<span class="item-zh">0010 = 把 AC 存入存储器（把累加器内容写回内存）</span></li>
+        <li class="sub">0101 = Add to AC from memory<span class="item-zh">0101 = 从存储器相加到 AC（把内存数据加到累加器）</span></li>
+      </ul>
+      <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 17, Figure 1.3 (Stallings, Computer Organization and Architecture)</span>
     </section>
 
     <section class="qa-section">
       <div class="qa-heading reveal">
         <span class="icon">&#63;</span>
         <span>Possible Exam Questions</span>
-        <span class="count">(1 questions &middot; click to reveal)</span>
+        <span class="count">(2 questions &middot; click to reveal)</span>
       </div>
 
       <article class="qa-card reveal">
         <button class="qa-question" type="button">
           <span class="q-label">Q1</span>
-          <span class="q-text">What does this slide contain?<span class="q-zh">这一页包含什么？</span></span>
+          <span class="q-text">Describe the instruction format of the hypothetical machine.<span class="q-zh">描述假想机器的指令格式。</span></span>
           <span class="chev" aria-hidden="true">&#9662;</span>
         </button>
         <div class="qa-answer">
           <div class="qa-answer-inner">
-            <p class="ans-en">A figure/illustration only; the slide has no textual content.</p>
-            <p class="ans-zh">即只有一张图／插图，该页没有文字内容。</p>
-            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 17</span>
+            <p class="ans-en">16-bit instructions: the first 4 bits (0&ndash;3) are the opcode, the remaining 12 bits (4&ndash;15) are the address.</p>
+            <p class="ans-zh">16 位指令：前 4 位（第 0&ndash;3 位）是操作码，其余 12 位（第 4&ndash;15 位）是地址。</p>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 17, Figure 1.3 (a)</span>
+          </div>
+        </div>
+      </article>
+      <article class="qa-card reveal">
+        <button class="qa-question" type="button">
+          <span class="q-label">Q2</span>
+          <span class="q-text">In the hypothetical machine, what do PC, IR and AC hold?<span class="q-zh">在假想机器中，PC、IR、AC 分别保存什么？</span></span>
+          <span class="chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="qa-answer">
+          <div class="qa-answer-inner">
+            <p class="ans-en">&ldquo;Program counter (PC) = Address of instruction&rdquo;, &ldquo;Instruction register (IR) = Instruction being executed&rdquo;, &ldquo;Accumulator (AC) = Temporary storage&rdquo;.</p>
+            <p class="ans-zh">即：程序计数器（PC）= 指令的地址；指令寄存器（IR）= 正在执行的指令；累加器（AC）= 临时存储。</p>
+            <span class="src">Source: &ldquo;Ch01v2a.pdf&rdquo; &mdash; Page 17, Figure 1.3 (c)</span>
           </div>
         </div>
       </article>

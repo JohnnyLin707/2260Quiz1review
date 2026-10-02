@@ -23,9 +23,9 @@ A static, dependency-free review site for **Operating Systems Quiz 1**. Every le
 | # | Deck | Source file | Slides | Exam questions |
 |---|------|-------------|:------:|:--------------:|
 | 01 | Introduction to Computer Hardware / 计算机硬件导论 | `Intro to HW v2.pdf` | 40 (all) | 109 |
-| 02 | Chapter 1: Computer System Overview / 第 1 章：计算机系统概述 | `Ch01v2a.pdf` | 47 (slides 1–47, up to *Write Policy*) | 95 |
+| 02 | Chapter 1: Computer System Overview / 第 1 章：计算机系统概述 | `Ch01v2a.pdf` | 47 (slides 1–47, up to *Write Policy*) | 96 |
 | 03 | Quiz1importantShortAnswer / 测验 1 重点简答题 | Short Questions (17 marks) | — | 4 |
-| | **Total** | | **87** | **208** |
+| | **Total** | | **87** | **209** |
 
 ### Deck 01 — Introduction to Computer Hardware
 Hardware vs. software, binary numbers, PC components, the motherboard, storage devices, buses, BIOS/UEFI, and the electrical system.
@@ -51,7 +51,7 @@ Four short-answer questions in the exact style of the quiz (17 marks), answered 
 - **The real slide image** — a full-width scan of the actual slide at the top of every page (99 images). Plain display: not clickable, and always scaled to fit the screen width.
 - **Bilingual** — every original line is followed by its Chinese translation.
 - **Textbook answers highlighted** — model answers on warm highlight chips, slide points on numbered low-glare cards, Chinese lines on soft mint chips.
-- **Exam-style Q&A** — 204 click-to-reveal questions with answers and source references on the slide pages, plus 4 short-answer drills with answer boxes.
+- **Exam-style Q&A** — 205 click-to-reveal questions with answers and source references on the slide pages, plus 4 short-answer drills with answer boxes.
 - **Write-and-check drills** — one input box per answer point, marked automatically: order does not matter, English or 中文 both accepted, missing keywords are reported.
 - **Searchable navigation** — a collapsible sidebar with live filtering, plus a keyword filter on each deck page.
 - **Keyboard shortcuts** — `←` previous slide, `→` next slide, `Esc` back to home.
